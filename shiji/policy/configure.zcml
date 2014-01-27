@@ -1,0 +1,27 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:five="http://namespaces.zope.org/five"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="shiji.policy">
+  
+  <includeDependencies package="." />
+  
+  <genericsetup:registerProfile
+    name="default"
+    title="ShiJi Policy"
+    directory="profiles/default"
+    description="ShiJi Policy Package."
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+  
+  <genericsetup:importStep
+    name="shiji-various"
+    title="ShiJi Additional Policy Setup"
+    description="ShiJi Policy Configuration."
+    handler="shiji.policy.setuphandlers.importVarious">
+    <depends name="rolemap" />
+  </genericsetup:importStep>
+  
+  <!-- -*- extra stuff goes here -*- -->
+  
+</configure>
