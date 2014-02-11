@@ -5,15 +5,19 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="shiji.policy">
   
-  <includeDependencies package="." />
-  
+  <five:registerPackage package="." initialize=".initialize" />
+ 
+  <adapter name="date" factory=".indexers.date" />
+  <adapter name="duty" factory=".indexers.duty" />
+  <adapter name="building" factory=".indexers.building" />
+
   <genericsetup:registerProfile
     name="default"
     title="ShiJi Policy"
     directory="profiles/default"
     description="ShiJi Policy Package."
     provides="Products.GenericSetup.interfaces.EXTENSION" />
-  
+
   <genericsetup:importStep
     name="shiji-various"
     title="ShiJi Additional Policy Setup"
