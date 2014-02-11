@@ -18,14 +18,4 @@
     description="ShiJi Policy Package."
     provides="Products.GenericSetup.interfaces.EXTENSION" />
 
-  <genericsetup:importStep
-    name="shiji-various"
-    title="ShiJi Additional Policy Setup"
-    description="ShiJi Policy Configuration."
-    handler="shiji.policy.setuphandlers.importVarious">
-    <depends name="rolemap" />
-  </genericsetup:importStep>
-  
-  <!-- -*- extra stuff goes here -*- -->
-  
 </configure>
