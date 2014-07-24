@@ -10,6 +10,9 @@
   <adapter name="date" factory=".indexers.date" />
   <adapter name="duty" factory=".indexers.duty" />
   <adapter name="building" factory=".indexers.building" />
+  <adapter name="category" factory=".indexers.category" />
+  <adapter name="origin" factory=".indexers.origin" />
+  <adapter name="track" factory=".indexers.track" />
 
   <genericsetup:registerProfile
     name="default"
